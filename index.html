@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Ahmed</div>
+                <div class="nav-links">
+                    <button class="nav-btn active" data-section="home">Home</button>
+                    <button class="nav-btn" data-section="projects">Projects</button>
+                    <button class="nav-btn" data-section="about">About</button>
+                    <button class="nav-btn" data-section="contact">Contact Me</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section hero-section active">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Graphic Designer <br>
+                        <span class="gradient-text">and Software Developer</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Create stunning digital experiences that combine creative design and professional programming.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showSection('projects')">View My Work</button>
+                        <button class="btn btn-outline" onclick="showSection('contact')">Contact Me</button>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/ahmedmohamedismai26" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-box">💻</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Projects</h2>
+                <p>A collection of outstanding projects that combine creative design and professional programming.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/imgs/project1.jpg" alt="Project 1" /></div>
+                    <div class="project-content">
+                        <h3>Country Data Collection Project</h3>
+                        <p>A web application that displays country data when its name is entered.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/imgs/project2.jpg" alt="Project 2" /></div>
+                    <div class="project-content">
+                        <h3>Password Generator Project</h3>
+                        <p>An application to generate strong passwords based on selected components.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/imgs/project3.jpg" alt="Project 3" /></div>
+                    <div class="project-content">
+                        <h3>Egypt Introductory Website</h3>
+                        <p>A website providing introductory information about Egypt.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/imgs/project4.jpg" alt="Project 4" /></div>
+                    <div class="project-content">
+                        <h3>Flight Booking Website</h3>
+                        <p>A website for booking flights with an easy-to-use interface.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/imgs/project5.jpg" alt="Project 5" /></div>
+                    <div class="project-content">
+                        <h3>Magic Caster</h3>
+                        <p>Magic Caster game developed using Gdscript.</p>
+                        <div class="project-tags">
+                            <span class="tag">Gdscript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image"><img src="assets/imgs/project6.jpg" alt="Project 6" /></div>
+                    <div class="project-content">
+                        <h3>Run Astronaut Run</h3>
+                        <p>Run Astronaut Run game developed using Gdscript.</p>
+                        <div class="project-tags">
+                            <span class="tag">Gdscript</span>
+                        </div>
+     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About</h2>
+                <p>Learn about my background, skills, and experience</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        I am a graphic designer and software developer specializing in creating stunning digital experiences. With over 3 years of experience in the field, I combine creativity and technology to deliver integrated solutions.
+                    </p>
+                    <p class="about-text">
+                        I work with brands and startups to transform their ideas into beautiful and effective digital realities. I believe that good design and smart programming should work together.
+                    </p>
+                </div>
+
+                <div class="about-cards">
+                    <div class="about-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming</h3>
+                        <p>Developing professional web and mobile applications</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-palette"></i>
+                        <h3>Design</h3>
+                        <p>Graphic design and user interfaces</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3>Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h4>Programming</h4>
+                        <ul class="skill-list">
+                            <li><span class="skill-dot"></span>Dart</li>
+                            <li><span class="skill-dot"></span>Html</li>
+                            <li><span class="skill-dot"></span>css</li>
+                            <li><span class="skill-dot"></span>JavaScript</li>
+                            <li><span class="skill-dot"></span>GdScript</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Design</h4>
+                        <ul class="skill-list">
+                            <li><span class="skill-dot"></span>Figma</li>
+                            <li><span class="skill-dot"></span>Adobe XD</li>
+                            <li><span class="skill-dot"></span>Photoshop</li>
+                            <li><span class="skill-dot"></span>UI/UX Design</li>
+                        </ul>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Tools</h4>
+                        <ul class="skill-list">
+                            <li><span class="skill-dot"></span>Git</li>
+                            <li><span class="skill-dot"></span>VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Me</h2>
+                <p>Have a project in mind? Let's talk about how to turn your ideas into reality</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#advanced-search/to=ahg30405060%40gmail.com&query=in%3Asent&isrefinement=true&todisplay=Ahmed">gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/">linkedin.com</a>
+                </div>
+            </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
