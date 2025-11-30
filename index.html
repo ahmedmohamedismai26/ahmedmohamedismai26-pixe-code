@@ -1,243 +1,221 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/ahmedmohamedismai26-pixe-code/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ahmed — Designer & Developer</title>
+  <meta name="description" content="Professional portfolio of Ahmed, a Graphic Designer & Software Developer crafting elegant digital experiences." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">Ahmed</div>
-                <div class="nav-links">
-                    <button class="nav-btn active" data-section="home">Home</button>
-                    <button class="nav-btn" data-section="projects">Projects</button>
-                    <button class="nav-btn" data-section="about">About</button>
-                    <button class="nav-btn" data-section="contact">Contact Me</button>
-                </div>
-            </div>
+
+  
+  <header class="navbar modern-nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <a href="#" class="logo">Ahmed</a>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn icon-btn" title="Toggle dark mode" type="button" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      </div>
+    </div>
+  </header>
+
+  
+  <section id="home" class="section hero-section active">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">I design beautiful interfaces <span class="accent">and build robust apps</span></h1>
+        <p class="hero-subtitle">I’m a Graphic Designer & Software Developer crafting elegant digital experiences — UI, Web Apps, Mobile & Games.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">See My Work</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="section hero-section active">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        Graphic Designer <br>
-                        <span class="gradient-text">and Software Developer</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Create stunning digital experiences that combine creative design and professional programming.
-                    </p>
-                    <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="showSection('projects')">View My Work</button>
-                        <button class="btn btn-outline" onclick="showSection('contact')">Contact Me</button>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/ahmedmohamedismai26" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-box">💻</div>
-                </div>
-            </div>
+        <div class="hero-meta">
+          <span class="meta-item"><i class="fas fa-briefcase"></i> 3+ years experience</span>
+          <span class="meta-item"><i class="fas fa-handshake"></i> Available for freelance</span>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Latest Projects</h2>
-                <p>A collection of outstanding projects that combine creative design and professional programming.</p>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project1.jpg" alt="Project 1" /></div>
-                    <div class="project-content">
-                        <h3>Country Data Collection Project</h3>
-                        <p>A web application that displays country data when its name is entered.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                      
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project2.jpg" alt="Project 2" /></div>
-                    <div class="project-content">
-                        <h3>Password Generator Project</h3>
-                        <p>An application to generate strong passwords based on selected components.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                      
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project3.jpg" alt="Project 3" /></div>
-                    <div class="project-content">
-                        <h3>Egypt Introductory Website</h3>
-                        <p>A website providing introductory information about Egypt.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project4.jpg" alt="Project 4" /></div>
-                    <div class="project-content">
-                        <h3>Flight Booking Website</h3>
-                        <p>A website for booking flights with an easy-to-use interface.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project5.jpg" alt="Project 5" /></div>
-                    <div class="project-content">
-                        <h3>Magic Caster</h3>
-                        <p>Magic Caster game developed using Gdscript.</p>
-                        <div class="project-tags">
-                            <span class="tag">Gdscript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project6.jpg" alt="Project 6" /></div>
-                    <div class="project-content">
-                        <h3>Fish</h3>
-                        <p>Fish game developed using Gdscript.</p>
-                        <div class="project-tags">
-                            <span class="tag">Gdscript</span>
-                        </div>
-     
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="hero-art">
+        <div class="card glass hero-card">
+          <img src="developer.jpg" alt="developer art" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x700?text=Image+not+available';">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>About</h2>
-                <p>Learn about my background, skills, and experience</p>
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest Professional Projects</h2>
+        <p>High‑quality featured projects crafted with modern UI/UX and clean development.</p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <a href="#" class="project-card fade-up">
+          <div class="project-image">
+            <img src="project1.jpg" alt="AI Dashboard" />
+          </div>
+          <div class="project-content">
+            <h3>AI Analytics Dashboard</h3>
+            <p>A modern dashboard that visualizes real‑time AI data with beautiful charts and interactive widgets.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Tailwind</span>
+              <span class="tag">API</span>
             </div>
+          </div>
+        </a>
 
-            <div class="about-grid">
-                <div class="about-content">
-                    <p class="about-text">
-                        I am a graphic designer and software developer specializing in creating stunning digital experiences. With over 3 years of experience in the field, I combine creativity and technology to deliver integrated solutions.
-                    </p>
-                    <p class="about-text">
-                        I work with brands and startups to transform their ideas into beautiful and effective digital realities. I believe that good design and smart programming should work together.
-                    </p>
-                </div>
-
-                <div class="about-cards">
-                    <div class="about-card">
-                        <i class="fas fa-code"></i>
-                        <h3>Programming</h3>
-                        <p>Developing professional web and mobile applications</p>
-                    </div>
-                    <div class="about-card">
-                        <i class="fas fa-palette"></i>
-                        <h3>Design</h3>
-                        <p>Graphic design and user interfaces</p>
-                    </div>
-                </div>
+        
+        <a href="#" class="project-card fade-up">
+          <div class="project-image">
+            <img src="project2.jpg" alt="SaaS Platform" />
+          </div>
+          <div class="project-content">
+            <h3>SaaS Landing Website</h3>
+            <p>A premium landing page for SaaS businesses with animations, pricing tables, and conversion‑optimized layout.</p>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
             </div>
+          </div>
+        </a>
 
-            <div class="skills-section">
-                <h3>Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-group">
-                        <h4>Programming</h4>
-                        <ul class="skill-list">
-                            <li><span class="skill-dot"></span>Dart</li>
-                            <li><span class="skill-dot"></span>Html</li>
-                            <li><span class="skill-dot"></span>css</li>
-                            <li><span class="skill-dot"></span>JavaScript</li>
-                            <li><span class="skill-dot"></span>GdScript</li>
-                        </ul>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Design</h4>
-                        <ul class="skill-list">
-                            <li><span class="skill-dot"></span>Figma</li>
-                            <li><span class="skill-dot"></span>Adobe XD</li>
-                            <li><span class="skill-dot"></span>Photoshop</li>
-                            <li><span class="skill-dot"></span>UI/UX Design</li>
-                        </ul>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Tools</h4>
-                        <ul class="skill-list">
-                            <li><span class="skill-dot"></span>Git</li>
-                            <li><span class="skill-dot"></span>VS Code</li>
-                        </ul>
-                    </div>
-                </div>
+        
+        <a href="#" class="project-card fade-up">
+          <div class="project-image">
+            <img src="project3.jpg" alt="Chat App" />
+          </div>
+          <div class="project-content">
+            <h3>Realtime Chat Application</h3>
+            <p>Fully responsive chat application with live messaging, typing indicators, and user presence detection.</p>
+            <div class="project-tags">
+              <span class="tag">NodeJS</span>
+              <span class="tag">WebSocket</span>
+              <span class="tag">MongoDB</span>
             </div>
+          </div>
+        </a>
+
+        <a href="#" class="project-card fade-up">
+          <div class="project-image">
+            <img src="project4.jpg" alt="Ecommerce Design" />
+          </div>
+          <div class="project-content">
+            <h3>E‑Commerce UI Showcase</h3>
+            <p>Premium shop interface featuring product cards, filters, dark mode, and smooth animations.</p>
+            <div class="project-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">UX/UI</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="project-card fade-up">
+          <div class="project-image">
+            <img src="project5.jpg" alt="Game UI" />
+          </div>
+          <div class="project-content">
+            <h3>Game UI Concept</h3>
+            <p>A futuristic game interface design with energy bars, mini‑maps, and glowing HUD effects.</p>
+            <div class="project-tags">
+              <span class="tag">Photoshop</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </div>
+        </a>
+
+        
+        <a href="#" class="project-card fade-up">
+          <div class="project-image">
+            <img src="project6.jpg" alt="Portfolio App" />
+          </div>
+          <div class="project-content">
+            <h3>Mobile Portfolio App</h3>
+            <p>A stylish mobile portfolio app showcasing animations, smooth navigation, and modern card layouts.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+        <p>Designer & Developer — I combine visual design with practical engineering to build polished digital products.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-content">
+          <p>I am a graphic designer and software developer with 3+ years experience building web and mobile products. I focus on pixel-perfect UI, performance and usability.</p>
+          <p>I work with startups and brands to turn ideas into production-ready products. I enjoy working across design systems, front-end engineering and prototyping.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" target="_blank" title="LinkedIn" aria-label="Open LinkedIn profile in a new tab" rel="noopener noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
+    
+            <a href="https://github.com/ahmedmohamedismai26" target="_blank" title="GitHub" aria-label="Open GitHub profile of ahmedmohamedismai26 in a new tab" rel="noopener noreferrer"><i class="fab fa-github fa-2x"></i></a>
+            
+          </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Me</h2>
-                <p>Have a project in mind? Let's talk about how to turn your ideas into reality</p>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#advanced-search/to=ahg30405060%40gmail.com&query=in%3Asent&isrefinement=true&todisplay=Ahmed">gmail.com</a>
-                </div>
-
-                <div class="contact-card">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/">linkedin.com</a>
-                </div>
-            </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p></p>
+        <div class="about-cards">
+          <div class="about-card glass fade-up">
+            <i class="fas fa-code fa-2x accent-icon"></i>
+            <h3>Development</h3>
+            <p>Web apps, APIs, and performance-first front-end.</p>
+          </div>
+          <div class="about-card glass fade-up">
+            <i class="fas fa-palette fa-2x accent-icon"></i>
+            <h3>Design</h3>
+            <p>UI/UX, branding and high-fidelity prototypes.</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="/ahmedmohamedismai26-pixe-code/script.js"></script>
+
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Me</h2>
+        <p>Have a project? Let's build it — email or message me on LinkedIn.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card glass fade-up">
+          
+          <i class="fab fa-github fa-2x accent-icon"></i>
+          <h3>GitHub</h3>
+          <a href="https://github.com/ahmedmohamedismai26" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="Open GitHub profile of ahmedmohamedismai26">GitHub</a>
+        </div>
+
+        <div class="contact-card glass fade-up">
+          <i class="fab fa-linkedin fa-2x accent-icon"></i>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/ahmed-mohamed-976275381/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Open LinkedIn profile">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button id="scrollTopBtn" class="scroll-top" title="Back to top" aria-label="Back to top" type="button">▲</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
