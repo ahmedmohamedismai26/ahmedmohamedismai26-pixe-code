@@ -1,172 +1,95 @@
 
-document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        const section = e.target.dataset.section;
-        showSection(section);
-        
-    
-        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-    });
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('.section');
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const scrollBtn = document.getElementById('scrollTopBtn');
 
-function showSection(sectionId) {
-    
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-    });
-    
-    const selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.classList.add('active');
-    }
-    
- 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+  function showSection(sectionId) {
+    sections.forEach(section => section.classList.remove('active'));
+    const selected = document.getElementById(sectionId);
+    if (selected) {
+      selected.classList.add('active');
      
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-      
-        if (!name || !email || !message) {
-            alert('يرجى ملء جميع الحقول');
-            return;
-        }
-        
-       
+      const headerHeight = document.querySelector('.navbar').offsetHeight || 80;
+      window.scrollTo({ top: selected.offsetTop - headerHeight, behavior: 'smooth' });
+    }
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      const sectionId = e.target.dataset.section;
+      if (sectionId) {
+        showSection(sectionId);
+        navLinks.forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+      }
     });
-}
+  });
 
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
-    });
-});
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  if (savedTheme === 'light') {
+    root.classList.add('light');
+    themeToggle.querySelector('i').className = 'fas fa-sun';
+  } else {
+    themeToggle.querySelector('i').className = 'fas fa-moon';
+  }
 
+  themeToggle.addEventListener('click', () => {
+    root.classList.toggle('light');
+    const now = root.classList.contains('light') ? 'light' : 'dark';
+    localStorage.setItem('theme', now);
+    themeToggle.querySelector('i').className = now === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+  });
 
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
+  
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); 
+      }
     });
-}, observerOptions);
+  }, { threshold: 0.15 }); 
 
-// Observe project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(card);
-});
+  document.querySelectorAll('.fade-up').forEach(el => {
+    observer.observe(el);
+  });
 
-// Observe about cards
-document.querySelectorAll('.about-card, .skill-group, .contact-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(card);
-});
+ 
+  function toggleScrollTopButton() {
+    scrollBtn.style.display = window.scrollY > 600 ? 'block' : 'none'; 
+  }
 
-// ==================== Mobile Menu Toggle ==================== 
-// Add active class to nav button on page load
-window.addEventListener('load', () => {
-    const homeBtn = document.querySelector('[data-section="home"]');
-    if (homeBtn) {
-        homeBtn.classList.add('active');
-    }
-});
+  window.addEventListener('scroll', toggleScrollTopButton);
+  toggleScrollTopButton(); // Initial check
 
-// ==================== Navbar Scroll Effect ==================== 
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > 100) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-    
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
-// ==================== Button Click Effects ==================== 
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        // Create ripple effect
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-        
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple');
-        
-        this.appendChild(ripple);
-        
-        setTimeout(() => ripple.remove(), 600);
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) { 
+        const currentSectionId = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.dataset.section === currentSectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
     });
+  }, {
+    rootMargin: '-50% 0px -50% 0px', 
+    threshold: 0 
+  });
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+ 
+  console.log('Professional portfolio initialized and enhanced 🚀');
 });
-
-// ==================== Add Ripple CSS Dynamically ==================== 
-const style = document.createElement('style');
-style.textContent = `
-    .btn {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.6);
-        transform: scale(0);
-        animation: ripple-animation 0.6s ease-out;
-        pointer-events: none;
-    }
-    
-    @keyframes ripple-animation {
-        to {
-            transform: scale(4);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
-
-// ==================== Initialize ==================== 
-console.log('Portfolio loaded successfully! 🚀');
-
