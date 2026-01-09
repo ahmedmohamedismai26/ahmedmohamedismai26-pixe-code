@@ -1,253 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ahmed — Designer & Developer</title>
-  <meta name="description" content="Professional portfolio of Ahmed, a Graphic Designer & Software Developer crafting elegant digital experiences." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahmed</title>
+  <meta name="description" content="I design beautiful interfaces and build robust apps">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  
-  <header class="navbar modern-nav">
-    <div class="container nav-inner">
-      <div class="brand">
-        <a href="#" class="logo">Ahmed</a>
-      </div>
-      <nav class="nav-links" id="mainNav">
-        <a href="#home" class="nav-link active" data-section="home">Home</a>
-        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-        <a href="#about" class="nav-link" data-section="about">About</a>
-        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">Ahmed</a>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
-
-      <div class="nav-actions">
-        <button id="themeToggle" class="btn icon-btn" title="Toggle dark mode" type="button" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
-        <!-- New Uiverse Burger Menu -->
-        <label class="hamburger">
-          <input type="checkbox" id="hamburgerCheckbox" />
-          <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
-            <path class="lineTop line" stroke-linecap="round" stroke-width="4" stroke="currentColor" d="M6 11L44 11"></path>
-            <path stroke-linecap="round" stroke-width="4" stroke="currentColor" d="M6 24H43" class="lineMid line"></path>
-            <path class="lineBottom line" stroke-linecap="round" stroke-width="4" stroke="currentColor" d="M6 37H43"></path>
-          </svg>
-        </label>
-      </div>
-    </div>
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav" id="mobileNav">
-      <a href="#home" class="nav-link active" data-section="home">Home</a>
-      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-      <a href="#about" class="nav-link" data-section="about">About</a>
-      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-    </div>
     </div>
   </header>
 
-  
-  <section id="home" class="section hero-section active">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <h1 class="hero-title">I design beautiful interfaces <span class="accent">and build robust apps</span></h1>
-        <p class="hero-subtitle">I’m a Graphic Designer & Software Developer crafting elegant digital experiences — UI, Web Apps, Mobile & Games.</p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">See My Work</a>
-          <a href="#contact" class="btn btn-outline">Contact Me</a>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>I design beautiful interfaces <span class="accent">and build robust apps</span></h1>
+          <p>I’m a Graphic Designer & Software Developer crafting elegant digital experiences — UI, Web Apps, Mobile & Games.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">SEE MY WORK</a>
+            <a class="btn btn-outline" href="#contact">CONTACT ME</a>
+          </div>
+          <p class="meta"> 3+ years experience &nbsp;  Available for freelance</p>
         </div>
-        <div class="hero-meta">
-          <span class="meta-item"><i class="fas fa-briefcase"></i> 3+ years experience</span>
-          <span class="meta-item"><i class="fas fa-handshake"></i> Available for freelance</span>
-        </div>
-      </div>
-      <div class="hero-art">
-        <div class="card glass hero-card">
-          <img src="assets/imgs/developer.jpg" alt="developer art" loading="lazy" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x700?text=Image+not+available';">
+        <div class="hero-art">
+          <img src="https://8000-imnx3fkx43d00g27muclg-e8604b10.sg1.manus.computer/assets/imgs/developer.jpg" alt="developer art" loading="lazy">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="section projects-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Latest Professional Projects</h2>
-        <p>High‑quality featured projects crafted with modern UI/UX and clean development.</p>
-      </div>
-
-      <div class="projects-grid">
-        
-        <a href="#" class="project-card fade-up">
-          <div class="project-image">
-            <img src="assets/imgs/project1.jpg" alt="AI Dashboard" />
-          </div>
-          <div class="project-content">
-            <h3>AI Analytics Dashboard</h3>
-            <p>A modern dashboard that visualizes real‑time AI data with beautiful charts and interactive widgets.</p>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">Tailwind</span>
-              <span class="tag">API</span>
-            </div>
-          </div>
-        </a>
-
-        
-        <a href="#" class="project-card fade-up">
-          <div class="project-image">
-            <img src="assets/imgs/project2.jpg" alt="SaaS Platform" />
-          </div>
-          <div class="project-content">
-            <h3>SaaS Landing Website</h3>
-            <p>A premium landing page for SaaS businesses with animations, pricing tables, and conversion‑optimized layout.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-          </div>
-        </a>
-
-        
-        <a href="#" class="project-card fade-up">
-          <div class="project-image">
-            <img src="assets/imgs/project3.jpg" alt="Chat App" />
-          </div>
-          <div class="project-content">
-            <h3>Realtime Chat Application</h3>
-            <p>Fully responsive chat application with live messaging, typing indicators, and user presence detection.</p>
-            <div class="project-tags">
-              <span class="tag">NodeJS</span>
-              <span class="tag">WebSocket</span>
-              <span class="tag">MongoDB</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="project-card fade-up">
-          <div class="project-image">
-            <img src="assets/imgs/project4.jpg" alt="Ecommerce Design" />
-          </div>
-          <div class="project-content">
-            <h3>E‑Commerce UI Showcase</h3>
-            <p>Premium shop interface featuring product cards, filters, dark mode, and smooth animations.</p>
-            <div class="project-tags">
-              <span class="tag">Figma</span>
-              <span class="tag">UX/UI</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="#" class="project-card fade-up">
-          <div class="project-image">
-            <img src="assets/imgs/project5.jpg" alt="Game UI" />
-          </div>
-          <div class="project-content">
-            <h3>Game UI Concept</h3>
-            <p>A futuristic game interface design with energy bars, mini‑maps, and glowing HUD effects.</p>
-            <div class="project-tags">
-              <span class="tag">Photoshop</span>
-              <span class="tag">UI/UX</span>
-            </div>
-          </div>
-        </a>
-
-        
-        <a href="#" class="project-card fade-up">
-          <div class="project-image">
-            <img src="assets/imgs/project6.jpg" alt="Portfolio App" />
-          </div>
-          <div class="project-content">
-            <h3>Mobile Portfolio App</h3>
-            <p>A stylish mobile portfolio app showcasing animations, smooth navigation, and modern card layouts.</p>
-            <div class="project-tags">
-              <span class="tag">Flutter</span>
-              <span class="tag">Dart</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section about-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>About Me</h2>
-        <p>Designer & Developer — I combine visual design with practical engineering to build polished digital products.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-content">
-          <p>I am a graphic designer and software developer with 3+ years experience building web and mobile products. I focus on pixel-perfect UI, performance and usability.</p>
-          <p>I work with startups and brands to turn ideas into production-ready products. I enjoy working across design systems, front-end engineering and prototyping.</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" target="_blank" title="LinkedIn" aria-label="Open LinkedIn profile in a new tab" rel="noopener noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
-    
-            <a href="https://github.com/ahmedmohamedismai26" target="_blank" title="GitHub" aria-label="Open GitHub profile of ahmedmohamedismai26 in a new tab" rel="noopener noreferrer"><i class="fab fa-github fa-2x"></i></a>
-            
-          </div>
-        </div>
-
-        <div class="about-cards">
-          <div class="about-card glass fade-up">
-            <i class="fas fa-code fa-2x accent-icon"></i>
-            <h3>Development</h3>
-            <p>Web apps, APIs, and performance-first front-end.</p>
-          </div>
-          <div class="about-card glass fade-up">
-            <i class="fas fa-palette fa-2x accent-icon"></i>
-            <h3>Design</h3>
-            <p>UI/UX, branding and high-fidelity prototypes.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Contact Me</h2>
-        <p>Have a project? Let's build it — send a message or connect on social media.</p>
-      </div>
-
-      <div class="contact-container">
-        <div class="contact-form-wrapper glass fade-up">
-          <form id="contactForm" class="contact-form">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-full">Send Message</button>
-            <div id="formMessage" class="form-status"></div>
-          </form>
-        </div>
-
-        <div class="contact-info-grid">
-          <div class="contact-card glass fade-up">
-            <i class="fab fa-github fa-2x accent-icon"></i>
-            <h3>GitHub</h3>
-            <a href="https://github.com/ahmedmohamedismai26" target="_blank" rel="noopener noreferrer">View Profile</a>
-          </div>
-
-          <div class="contact-card glass fade-up">
-            <i class="fab fa-linkedin fa-2x accent-icon"></i>
-            <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/ahmed-mohamed-976275381/" target="_blank" rel="noopener noreferrer">Connect Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <button id="scrollTopBtn" class="scroll-top" title="Back to top" aria-label="Back to top" type="button">▲</button>
+    <section class="additional-links container">
+      <h2>Additional Links</h2>
+      <ul>
+        <li><a href="https://8000-imnx3fkx43d00g27muclg-e8604b10.sg1.manus.computer/#home">Home</a></li>
+        <li><a href="https://8000-imnx3fkx43d00g27muclg-e8604b10.sg1.manus.computer/#projects">Projects</a></li>
+        <li><a href="https://8000-imnx3fkx43d00g27muclg-e8604b10.sg1.manus.computer/#about">About</a></li>
+        <li><a href="https://8000-imnx3fkx43d00g27muclg-e8604b10.sg1.manus.computer/#contact">Contact</a></li>
+      </ul>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
