@@ -355,7 +355,7 @@ body {
 /* RTL Support */
 [dir="rtl"] body,
 body[dir="rtl"] {
-    font-family: 'Amiri', 'Cairo', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', 'Cairo', sans-serif;
 }
 
 [dir="rtl"] .hero-content,
