@@ -92,12 +92,12 @@
     --primary-dark: #0047cc;
     --secondary: #ff3366;
     --accent: #00d4aa;
-    --background: #f8f9fa;
-    --foreground: #111111;
+    --background: #fafafa;
+    --foreground: #1a1a2e;
     --card-bg: #ffffff;
-    --border-color: #e0e0e0;
-    --text-muted: #666666;
-    --text-light: #999999;
+    --border-color: #e8e8e8;
+    --text-muted: #4a4a5a;
+    --text-light: #8888a0;
     --gradient-primary: linear-gradient(135deg, #0057ff 0%, #00d4aa 100%);
 }
 
