@@ -21,9 +21,9 @@ const translations = {
     projectsCompleted: 'Projects Completed',
     happyClients: 'Happy Clients',
     skillsTitle: 'Skills & Tools',
-    contactTitle: 'Let's Work Together',
-        contactSubtitle: 'Have a project in mind? Get in touch and let's create something amazing.',
-        emailLabel: 'Email',
+    contactTitle: "Let's Work Together",
+    contactSubtitle: "Have a project in mind? Get in touch and let's create something amazing.",
+    emailLabel: 'Email',
     nameLabel: 'Name',
     namePlaceholder: 'Your full name',
     nameError: 'Please enter your name',
@@ -50,8 +50,8 @@ const translations = {
     messageError: 'Please enter your message',
     sendBtn: 'Send Message',
     successTitle: 'Message Sent!',
-    successMessage: 'Thank you for reaching out. I'll get back to you soon.',
-        newMessageBtn: 'Send Another Message',
+    successMessage: "Thank you for reaching out. I'll get back to you soon.",
+    newMessageBtn: 'Send Another Message',
     footerText: 'Pixel.Code_26'
   },
   ar: {
