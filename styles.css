@@ -1352,6 +1352,11 @@ body[dir="rtl"] .form-group select {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
 @media (max-width: 480px) {

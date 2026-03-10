@@ -226,6 +226,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const navBtns = document.querySelectorAll('.nav-btn');
   const sections = document.querySelectorAll('.section');
 
+  // Language Toggle Button
+  const langToggle = document.getElementById('langToggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', toggleLanguage);
+  }
+
   // Nav link click handlers
   navBtns.forEach(link => {
     link.addEventListener('click', (e) => {
