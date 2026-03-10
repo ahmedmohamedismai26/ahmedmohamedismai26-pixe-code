@@ -393,7 +393,7 @@ body[dir="rtl"] .about-content p {
     text-align: right;
 }
 
-/* Arabic Headings - Decorative Calligraphy Font */
+/* Arabic Headings - Kufi Calligraphy Font */
 [dir="rtl"] h1,
 [dir="rtl"] h2,
 [dir="rtl"] h3,
@@ -408,7 +408,7 @@ body[dir="rtl"] h4,
 body[dir="rtl"] .logo-text,
 body[dir="rtl"] .btn,
 body[dir="rtl"] .hero-tagline {
-    font-family: 'Aref Ruqaa', 'Amiri', 'Cairo', sans-serif;
+    font-family: 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', 'Cairo', sans-serif;
 }
 
 /* English Headings - Calligraphy Font */
@@ -416,8 +416,8 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Dancing Script', 'Poppins', cursive;
-    font-weight: 700;
+    font-family: 'Great Vibes', 'Homemade Apple', 'Calligraffitti', 'Poppins', cursive;
+    font-weight: 400;
 }
 
 [dir="rtl"] .contact-form-wrapper,
