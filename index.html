@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed | Graphic Designer & Software Developer</title>
-    <meta name="description" content="Professional Portfolio of Ahmed - Graphic Designer and Software Developer creating stunning digital experiences">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ahmed | Graphic Designer & Developer</title>
+    <meta name="description" content="Professional Portfolio of Ahmed - Graphic Designer and Software Developer">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,10 +14,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="logo">Ahmed</div>
+                <a href="#home" class="logo" onclick="showSection('home')">Ahmed<span>.</span></a>
                 <div class="nav-links">
                     <button class="nav-btn active" data-section="home">Home</button>
-                    <button class="nav-btn" data-section="projects">Projects</button>
+                    <button class="nav-btn" data-section="projects">Work</button>
                     <button class="nav-btn" data-section="about">About</button>
                     <button class="nav-btn" data-section="contact">Contact</button>
                 </div>
@@ -30,40 +30,35 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1 class="hero-title">
-                        Graphic Designer <br>
-                        <span class="gradient-text">and Developer</span>
-                    </h1>
+                    <h1>Graphic Designer <span>&</span> Developer</h1>
                     <p class="hero-subtitle">
-                        Creating stunning digital experiences that combine creative design and professional programming. Let's build something amazing together.
+                        Creating stunning digital experiences that combine creative design and professional development. Based in Egypt, working with clients worldwide.
                     </p>
                     <div class="hero-buttons">
                         <button class="btn btn-primary" onclick="showSection('projects')">
-                            <i class="fas fa-rocket"></i> View My Work
+                            View My Work <i class="fas fa-arrow-right"></i>
                         </button>
                         <button class="btn btn-outline" onclick="showSection('contact')">
-                            <i class="fas fa-envelope"></i> Contact Me
+                            Get In Touch
                         </button>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/ahmedmohamedismai26" class="social-icon" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/ahmedmohamedismai26" class="social-icon" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">
+                        <a href="https://twitter.com" class="social-icon" target="_blank">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.behance.net" class="social-icon" target="_blank" aria-label="Behance">
+                        <a href="https://www.behance.net" class="social-icon" target="_blank">
                             <i class="fab fa-behance"></i>
                         </a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="hero-box">
-                        <img src="assets/imgs/developer.jpg" alt="Ahmed - Designer & Developer" />
-                    </div>
+                    <img src="assets/imgs/developer.jpg" alt="Ahmed - Designer & Developer" />
                 </div>
             </div>
         </div>
@@ -72,82 +67,80 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <div class="section-header fade-up">
-                <h2>Latest Projects</h2>
-                <p>A collection of outstanding projects that combine creative design and professional programming</p>
+            <div class="section-header">
+                <h2>Selected Work</h2>
+                <p>A collection of projects showcasing design and development skills</p>
             </div>
 
             <div class="projects-grid">
-                <div class="project-card fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/imgs/project1.jpg" alt="Portfolio Website" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-content">
                         <h3>Portfolio Website</h3>
-                        <p>A modern, responsive portfolio website featuring dark/light theme toggle and smooth animations.</p>
+                        <p>A modern, responsive portfolio with dark/light theme and smooth animations.</p>
                         <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
+                            <span class="tag">Web Design</span>
+                            <span class="tag">Development</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/imgs/project2.jpg" alt="E-Commerce App" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-content">
                         <h3>E-Commerce Mobile App</h3>
-                        <p>A full-featured shopping app with product catalog, shopping cart, and secure payment integration.</p>
+                        <p>Full-featured shopping app with cart, authentication, and payment integration.</p>
                         <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
+                            <span class="tag">Mobile App</span>
+                            <span class="tag">UI/UX</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/imgs/project3.jpg" alt="Task Manager" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-content">
-                        <h3>Task Manager Web App</h3>
-                        <p>A productivity application with drag-and-drop kanban boards and team collaboration.</p>
+                        <h3>Task Manager App</h3>
+                        <p>Productivity application with kanban boards and team collaboration.</p>
                         <div class="project-tags">
+                            <span class="tag">Web App</span>
                             <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/imgs/project4.jpg" alt="Brand Identity" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-content">
-                        <h3>Brand Identity Design</h3>
-                        <p>Complete brand identity including logo design, color palette, and brand guidelines.</p>
+                        <h3>Brand Identity</h3>
+                        <p>Complete brand identity with logo, colors, and guidelines.</p>
                         <div class="project-tags">
-                            <span class="tag">Figma</span>
-                            <span class="tag">Adobe AI</span>
+                            <span class="tag">Branding</span>
+                            <span class="tag">Design</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/imgs/project5.jpg" alt="Weather Dashboard" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-content">
                         <h3>Weather Dashboard</h3>
-                        <p>Real-time weather application with 7-day forecast and beautiful visualizations.</p>
+                        <p>Real-time weather app with 7-day forecast and visualizations.</p>
                         <div class="project-tags">
                             <span class="tag">Vue.js</span>
                             <span class="tag">API</span>
@@ -155,17 +148,17 @@
                     </div>
                 </div>
 
-                <div class="project-card fade-up">
+                <div class="project-card">
                     <div class="project-image">
                         <img src="assets/imgs/project6.jpg" alt="2D Platformer Game" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-content">
                         <h3>2D Platformer Game</h3>
-                        <p>An engaging 2D platformer game with custom graphics and multiple levels.</p>
+                        <p>Engaging game with custom graphics and multiple levels.</p>
                         <div class="project-tags">
+                            <span class="tag">Game Dev</span>
                             <span class="tag">Unity</span>
-                            <span class="tag">C#</span>
                         </div>
                     </div>
                 </div>
@@ -176,71 +169,58 @@
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <div class="section-header fade-up">
+            <div class="section-header">
                 <h2>About Me</h2>
-                <p>Learn about my background, skills, and experience</p>
+                <p>Get to know more about my background and skills</p>
             </div>
 
             <div class="about-grid">
-                <div class="about-content fade-up">
-                    <p class="about-text">
-                        I am a passionate graphic designer and software developer specializing in creating stunning digital experiences. With over 3 years of experience in the field, I combine creativity and technology to deliver integrated solutions that exceed expectations.
+                <div class="about-content">
+                    <p>
+                        I'm a passionate graphic designer and software developer with over 3 years of experience creating digital experiences that make a difference. I specialize in UI/UX design, web development, mobile applications, and game development.
                     </p>
-                    <p class="about-text">
-                        I work with brands and startups to transform their ideas into beautiful and effective digital realities. I believe that good design and smart programming should work together to create memorable user experiences.
+                    <p>
+                        My approach combines creative design thinking with robust technical implementation to deliver solutions that not only look great but also perform exceptionally. I believe in continuous learning and staying updated with the latest technologies and design trends.
                     </p>
-                    <p class="about-text">
-                        My approach is collaborative and client-focused, ensuring that every project receives the attention it deserves. Let's create something amazing together!
+                    <p>
+                        Every project is an opportunity to create something meaningful and impactful. Let's work together to bring your ideas to life!
                     </p>
-                </div>
 
-                <div class="about-cards fade-up">
-                    <div class="about-card">
-                        <i class="fas fa-code"></i>
-                        <h3>Development</h3>
-                        <p>Building robust web and mobile applications with modern technologies</p>
-                    </div>
-                    <div class="about-card">
-                        <i class="fas fa-palette"></i>
-                        <h3>Design</h3>
-                        <p>Creating beautiful user interfaces and brand identities</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="skills-section fade-up">
-                <h3>Skills & Technologies</h3>
+            <div class="skills-section">
+                <h3>Skills & Tools</h3>
                 <div class="skills-grid">
-                    <div class="skill-group">
-                        <h4>Programming</h4>
-                        <ul class="skill-list">
-                            <li><span class="skill-dot"></span>JavaScript</li>
-                            <li><span class="skill-dot"></span>HTML/CSS</li>
-                            <li><span class="skill-dot"></span>Dart</li>
-                            <li><span class="skill-dot"></span>Python</li>
-                            <li><span class="skill-dot"></span>GdScript</li>
-                        </ul>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Design</h4>
-                        <ul class="skill-list">
-                            <li><span class="skill-dot"></span>UI/UX Design</li>
-                            <li><span class="skill-dot"></span>Figma</li>
-                            <li><span class="skill-dot"></span>Adobe XD</li>
-                            <li><span class="skill-dot"></span>Photoshop</li>
-                            <li><span class="skill-dot"></span>Illustrator</li>
-                        </ul>
-                    </div>
-                    <div class="skill-group">
-                        <h4>Tools & Frameworks</h4>
-                        <ul class="skill-list">
-                            <li><span class="skill-dot"></span>React</li>
-                            <li><span class="skill-dot"></span>Flutter</li>
-                            <li><span class="skill-dot"></span>Git</li>
-                            <li><span class="skill-dot"></span>VS Code</li>
-                            <li><span class="skill-dot"></span>Unity</li>
-                        </ul>
-                    </div>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Graphic Design</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Mobile Apps</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Adobe XD</span>
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">Illustrator</span>
+                    <span class="skill-tag">Unity</span>
+                    <span class="skill-tag">Game Development</span>
+                    <span class="skill-tag">Git</span>
                 </div>
             </div>
         </div>
@@ -249,28 +229,28 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header fade-up">
-                <h2>Get In Touch</h2>
-                <p>Have a project in mind? Let's discuss how we can work together</p>
+            <div class="section-header">
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind? Get in touch and let's create something amazing.</p>
             </div>
 
             <div class="contact-grid">
-                <a href="mailto:ahg30405060@gmail.com" class="contact-card fade-up">
+                <a href="mailto:ahg30405060@gmail.com" class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
                     <p>ahg30405060@gmail.com</p>
                 </a>
 
-                <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="contact-card fade-up" target="_blank">
+                <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="contact-card" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                     <h3>LinkedIn</h3>
                     <p>Connect with me</p>
                 </a>
 
-                <a href="https://github.com/ahmedmohamedismai26" class="contact-card fade-up" target="_blank">
+                <a href="https://github.com/ahmedmohamedismai26" class="contact-card" target="_blank">
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
-                    <p>Check my repositories</p>
+                    <p>View my work</p>
                 </a>
             </div>
         </div>
