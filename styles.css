@@ -416,19 +416,19 @@ p {
     right: 0;
     z-index: 1000;
     padding: 16px 0;
-    background: rgba(248, 249, 251, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     animation: slideDown 0.6s ease-out forwards;
     transition: all 0.3s ease;
 }
 
 /* Dark mode navbar */
 [data-theme="dark"] .navbar {
-    background: rgba(15, 20, 25, 0.95);
-    border-bottom: 1px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @keyframes slideDown {
