@@ -355,7 +355,7 @@ body {
 /* RTL Support */
 [dir="rtl"] body,
 body[dir="rtl"] {
-    font-family: 'Scheherazade New', 'Amiri', 'Cairo', sans-serif;
+    font-family: 'Aref Ruqaa', 'Amiri', 'Cairo', sans-serif;
 }
 
 [dir="rtl"] .hero-content,
@@ -406,7 +406,7 @@ body[dir="rtl"] h3,
 body[dir="rtl"] h4,
 body[dir="rtl"] .logo-text,
 body[dir="rtl"] .btn {
-    font-family: 'Scheherazade New', 'Amiri', 'Cairo', sans-serif;
+    font-family: 'Aref Ruqaa', 'Amiri', 'Cairo', sans-serif;
 }
 
 /* English Headings - Calligraphy Font */
@@ -560,7 +560,7 @@ p {
 
 [dir="rtl"] .navbar-tagline,
 body[dir="rtl"] .navbar-tagline {
-    font-family: 'Scheherazade New', 'Amiri', serif;
+    font-family: 'Aref Ruqaa', 'Amiri', serif;
 }
 
 .logo-text {
