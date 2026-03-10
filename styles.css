@@ -202,11 +202,11 @@
     --secondary: #f43f5e;
     --accent: #22d3ee;
     --background: #0f0f23;
-    --foreground: #ffffff;
+    --foreground: #e2e8f0;
     --card-bg: #1a1a2e;
     --border-color: #2d2d44;
-    --text-muted: #b8b8c8;
-    --text-light: #8888a0;
+    --text-muted: #94a3b8;
+    --text-light: #64748b;
     --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
 }
 
