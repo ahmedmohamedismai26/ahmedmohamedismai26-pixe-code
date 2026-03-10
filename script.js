@@ -32,6 +32,16 @@ window.showSection = function(sectionId) {
   history.pushState(null, null, `#${sectionId}`);
 };
 
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-btn');
   const sections = document.querySelectorAll('.section');
