@@ -1,95 +1,80 @@
-
 document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-btn');
   const sections = document.querySelectorAll('.section');
-  const themeToggle = document.getElementById('themeToggle');
-  const root = document.documentElement;
-  const scrollBtn = document.getElementById('scrollTopBtn');
 
+  // Show section function
   function showSection(sectionId) {
-    sections.forEach(section => section.classList.remove('active'));
-    const selected = document.getElementById(sectionId);
-    if (selected) {
-      selected.classList.add('active');
-     
-      const headerHeight = document.querySelector('.navbar').offsetHeight || 80;
-      window.scrollTo({ top: selected.offsetTop - headerHeight, behavior: 'smooth' });
+    // Hide all sections
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+
+    // Show target section
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.classList.add('active');
+      
+      // Trigger fade-up animations
+      setTimeout(() => {
+        target.querySelectorAll('.fade-up').forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add('visible');
+          }, index * 100);
+        });
+      }, 100);
     }
+
+    // Update nav buttons
+    navLinks.forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.dataset.section === sectionId) {
+        btn.classList.add('active');
+      }
+    });
+
+    // Update URL
+    history.pushState(null, null, `#${sectionId}`);
   }
 
+  // Nav link click handlers
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault(); 
-      const sectionId = e.target.dataset.section;
+      e.preventDefault();
+      const sectionId = link.dataset.section;
       if (sectionId) {
         showSection(sectionId);
-        navLinks.forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
       }
     });
   });
 
+  // Handle initial hash
+  const initialHash = window.location.hash.replace('#', '') || 'home';
+  showSection(initialHash);
 
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  if (savedTheme === 'light') {
-    root.classList.add('light');
-    themeToggle.querySelector('i').className = 'fas fa-sun';
-  } else {
-    themeToggle.querySelector('i').className = 'fas fa-moon';
-  }
-
-  themeToggle.addEventListener('click', () => {
-    root.classList.toggle('light');
-    const now = root.classList.contains('light') ? 'light' : 'dark';
-    localStorage.setItem('theme', now);
-    themeToggle.querySelector('i').className = now === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+  // Handle browser back/forward
+  window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.replace('#', '') || 'home';
+    showSection(hash);
   });
 
-  
-  const observer = new IntersectionObserver(entries => {
+  // Scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); 
       }
     });
-  }, { threshold: 0.15 }); 
+  }, observerOptions);
 
+  // Observe all fade-up elements in active section
   document.querySelectorAll('.fade-up').forEach(el => {
     observer.observe(el);
   });
 
- 
-  function toggleScrollTopButton() {
-    scrollBtn.style.display = window.scrollY > 600 ? 'block' : 'none'; 
-  }
-
-  window.addEventListener('scroll', toggleScrollTopButton);
-  toggleScrollTopButton(); // Initial check
-
-  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-  const sectionObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) { 
-        const currentSectionId = entry.target.id;
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.dataset.section === currentSectionId) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }, {
-    rootMargin: '-50% 0px -50% 0px', 
-    threshold: 0 
-  });
-
-  sections.forEach(section => {
-    sectionObserver.observe(section);
-  });
-
- 
-  console.log('Professional portfolio initialized and enhanced 🚀');
+  console.log('Portfolio initialized 🚀');
 });

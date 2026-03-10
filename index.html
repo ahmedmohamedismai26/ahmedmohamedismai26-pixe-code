@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed</title>
+    <title>Ahmed | Graphic Designer & Software Developer</title>
+    <meta name="description" content="Professional Portfolio of Ahmed - Graphic Designer and Software Developer creating stunning digital experiences">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/ahmedmohamedismai26-pixe-code/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,7 +19,7 @@
                     <button class="nav-btn active" data-section="home">Home</button>
                     <button class="nav-btn" data-section="projects">Projects</button>
                     <button class="nav-btn" data-section="about">About</button>
-                    <button class="nav-btn" data-section="contact">Contact Me</button>
+                    <button class="nav-btn" data-section="contact">Contact</button>
                 </div>
             </div>
         </div>
@@ -31,22 +32,38 @@
                 <div class="hero-content">
                     <h1 class="hero-title">
                         Graphic Designer <br>
-                        <span class="gradient-text">and Software Developer</span>
+                        <span class="gradient-text">and Developer</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Create stunning digital experiences that combine creative design and professional programming.
+                        Creating stunning digital experiences that combine creative design and professional programming. Let's build something amazing together.
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="showSection('projects')">View My Work</button>
-                        <button class="btn btn-outline" onclick="showSection('contact')">Contact Me</button>
+                        <button class="btn btn-primary" onclick="showSection('projects')">
+                            <i class="fas fa-rocket"></i> View My Work
+                        </button>
+                        <button class="btn btn-outline" onclick="showSection('contact')">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </button>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/ahmedmohamedismai26" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ahmedmohamedismai26" class="social-icon" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.behance.net" class="social-icon" target="_blank" aria-label="Behance">
+                            <i class="fab fa-behance"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="hero-box">💻</div>
+                    <div class="hero-box">
+                        <img src="assets/imgs/developer.jpg" alt="Ahmed - Designer & Developer" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,87 +72,101 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header fade-up">
                 <h2>Latest Projects</h2>
-                <p>A collection of outstanding projects that combine creative design and professional programming.</p>
+                <p>A collection of outstanding projects that combine creative design and professional programming</p>
             </div>
 
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project1.jpg" alt="Project 1" /></div>
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="assets/imgs/project1.jpg" alt="Portfolio Website" />
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
-                        <h3>Country Data Collection Project</h3>
-                        <p>A web application that displays country data when its name is entered.</p>
+                        <h3>Portfolio Website</h3>
+                        <p>A modern, responsive portfolio website featuring dark/light theme toggle and smooth animations.</p>
                         <div class="project-tags">
                             <span class="tag">HTML</span>
                             <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                      
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project2.jpg" alt="Project 2" /></div>
-                    <div class="project-content">
-                        <h3>Password Generator Project</h3>
-                        <p>An application to generate strong passwords based on selected components.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                      
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project3.jpg" alt="Project 3" /></div>
-                    <div class="project-content">
-                        <h3>Egypt Introductory Website</h3>
-                        <p>A website providing introductory information about Egypt.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project4.jpg" alt="Project 4" /></div>
-                    <div class="project-content">
-                        <h3>Flight Booking Website</h3>
-                        <p>A website for booking flights with an easy-to-use interface.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JS</span>
+                            <span class="tag">JavaScript</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project5.jpg" alt="Project 5" /></div>
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="assets/imgs/project2.jpg" alt="E-Commerce App" />
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
-                        <h3>Magic Caster</h3>
-                        <p>Magic Caster game developed using Gdscript.</p>
+                        <h3>E-Commerce Mobile App</h3>
+                        <p>A full-featured shopping app with product catalog, shopping cart, and secure payment integration.</p>
                         <div class="project-tags">
-                            <span class="tag">Gdscript</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image"><img src="/ahmedmohamedismai26-pixe-code/assets/imgs/project6.jpg" alt="Project 6" /></div>
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="assets/imgs/project3.jpg" alt="Task Manager" />
+                        <div class="project-overlay"></div>
+                    </div>
                     <div class="project-content">
-                        <h3>Fish</h3>
-                        <p>Fish game developed using Gdscript.</p>
+                        <h3>Task Manager Web App</h3>
+                        <p>A productivity application with drag-and-drop kanban boards and team collaboration.</p>
                         <div class="project-tags">
-                            <span class="tag">Gdscript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
                         </div>
-     
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="assets/imgs/project4.jpg" alt="Brand Identity" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Brand Identity Design</h3>
+                        <p>Complete brand identity including logo design, color palette, and brand guidelines.</p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Adobe AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="assets/imgs/project5.jpg" alt="Weather Dashboard" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Dashboard</h3>
+                        <p>Real-time weather application with 7-day forecast and beautiful visualizations.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="assets/imgs/project6.jpg" alt="2D Platformer Game" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <h3>2D Platformer Game</h3>
+                        <p>An engaging 2D platformer game with custom graphics and multiple levels.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,62 +176,69 @@
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <div class="section-header">
-                <h2>About</h2>
+            <div class="section-header fade-up">
+                <h2>About Me</h2>
                 <p>Learn about my background, skills, and experience</p>
             </div>
 
             <div class="about-grid">
-                <div class="about-content">
+                <div class="about-content fade-up">
                     <p class="about-text">
-                        I am a graphic designer and software developer specializing in creating stunning digital experiences. With over 3 years of experience in the field, I combine creativity and technology to deliver integrated solutions.
+                        I am a passionate graphic designer and software developer specializing in creating stunning digital experiences. With over 3 years of experience in the field, I combine creativity and technology to deliver integrated solutions that exceed expectations.
                     </p>
                     <p class="about-text">
-                        I work with brands and startups to transform their ideas into beautiful and effective digital realities. I believe that good design and smart programming should work together.
+                        I work with brands and startups to transform their ideas into beautiful and effective digital realities. I believe that good design and smart programming should work together to create memorable user experiences.
+                    </p>
+                    <p class="about-text">
+                        My approach is collaborative and client-focused, ensuring that every project receives the attention it deserves. Let's create something amazing together!
                     </p>
                 </div>
 
-                <div class="about-cards">
+                <div class="about-cards fade-up">
                     <div class="about-card">
                         <i class="fas fa-code"></i>
-                        <h3>Programming</h3>
-                        <p>Developing professional web and mobile applications</p>
+                        <h3>Development</h3>
+                        <p>Building robust web and mobile applications with modern technologies</p>
                     </div>
                     <div class="about-card">
                         <i class="fas fa-palette"></i>
                         <h3>Design</h3>
-                        <p>Graphic design and user interfaces</p>
+                        <p>Creating beautiful user interfaces and brand identities</p>
                     </div>
                 </div>
             </div>
 
-            <div class="skills-section">
-                <h3>Skills</h3>
+            <div class="skills-section fade-up">
+                <h3>Skills & Technologies</h3>
                 <div class="skills-grid">
                     <div class="skill-group">
                         <h4>Programming</h4>
                         <ul class="skill-list">
-                            <li><span class="skill-dot"></span>Dart</li>
-                            <li><span class="skill-dot"></span>Html</li>
-                            <li><span class="skill-dot"></span>css</li>
                             <li><span class="skill-dot"></span>JavaScript</li>
+                            <li><span class="skill-dot"></span>HTML/CSS</li>
+                            <li><span class="skill-dot"></span>Dart</li>
+                            <li><span class="skill-dot"></span>Python</li>
                             <li><span class="skill-dot"></span>GdScript</li>
                         </ul>
                     </div>
                     <div class="skill-group">
                         <h4>Design</h4>
                         <ul class="skill-list">
+                            <li><span class="skill-dot"></span>UI/UX Design</li>
                             <li><span class="skill-dot"></span>Figma</li>
                             <li><span class="skill-dot"></span>Adobe XD</li>
                             <li><span class="skill-dot"></span>Photoshop</li>
-                            <li><span class="skill-dot"></span>UI/UX Design</li>
+                            <li><span class="skill-dot"></span>Illustrator</li>
                         </ul>
                     </div>
                     <div class="skill-group">
-                        <h4>Tools</h4>
+                        <h4>Tools & Frameworks</h4>
                         <ul class="skill-list">
+                            <li><span class="skill-dot"></span>React</li>
+                            <li><span class="skill-dot"></span>Flutter</li>
                             <li><span class="skill-dot"></span>Git</li>
                             <li><span class="skill-dot"></span>VS Code</li>
+                            <li><span class="skill-dot"></span>Unity</li>
                         </ul>
                     </div>
                 </div>
@@ -211,33 +249,40 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Contact Me</h2>
-                <p>Have a project in mind? Let's talk about how to turn your ideas into reality</p>
+            <div class="section-header fade-up">
+                <h2>Get In Touch</h2>
+                <p>Have a project in mind? Let's discuss how we can work together</p>
             </div>
 
             <div class="contact-grid">
-                <div class="contact-card">
+                <a href="mailto:ahg30405060@gmail.com" class="contact-card fade-up">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#advanced-search/to=ahg30405060%40gmail.com&query=in%3Asent&isrefinement=true&todisplay=Ahmed">gmail.com</a>
-                </div>
+                    <p>ahg30405060@gmail.com</p>
+                </a>
 
-                <div class="contact-card">
-                    <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="contact-card fade-up" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
                     <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/">linkedin.com</a>
-                </div>
+                    <p>Connect with me</p>
+                </a>
+
+                <a href="https://github.com/ahmedmohamedismai26" class="contact-card fade-up" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Check my repositories</p>
+                </a>
             </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p></p>
+            <p>&copy; 2024 Ahmed. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="/ahmedmohamedismai26-pixe-code/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
