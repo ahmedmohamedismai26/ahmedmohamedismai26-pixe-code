@@ -259,6 +259,34 @@ p {
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
 }
 
+.upload-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 87, 255, 0.3);
+}
+
+.upload-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 87, 255, 0.4);
+}
+
+.upload-btn i {
+    font-size: 1rem;
+}
+
 /* ==================== Projects Section ==================== */
 .projects-section {
     background: var(--card-bg);

@@ -62,4 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   console.log('Portfolio initialized 🚀');
+
+  // Image upload functionality
+  const imageUpload = document.getElementById('imageUpload');
+  const profileImage = document.getElementById('profileImage');
+
+  if (imageUpload && profileImage) {
+    imageUpload.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          profileImage.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
 });
