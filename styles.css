@@ -400,14 +400,12 @@ body[dir="rtl"] .about-content p {
 [dir="rtl"] h4,
 [dir="rtl"] .logo-text,
 [dir="rtl"] .btn,
-[dir="rtl"] .hero-tagline,
 body[dir="rtl"] h1,
 body[dir="rtl"] h2,
 body[dir="rtl"] h3,
 body[dir="rtl"] h4,
 body[dir="rtl"] .logo-text,
-body[dir="rtl"] .btn,
-body[dir="rtl"] .hero-tagline {
+body[dir="rtl"] .btn {
     font-family: 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', 'Cairo', sans-serif;
 }
 
@@ -557,6 +555,12 @@ p {
     animation: pulse 2s ease-in-out infinite;
     white-space: nowrap;
     margin-left: 16px;
+    font-family: 'Great Vibes', 'Calligraffitti', cursive;
+}
+
+[dir="rtl"] .navbar-tagline,
+body[dir="rtl"] .navbar-tagline {
+    font-family: 'Noto Naskh Arabic', 'Scheherazade New', 'Amiri', serif;
 }
 
 .logo-text {
@@ -817,28 +821,6 @@ body[dir="rtl"] .lang-toggle .lang-ar {
     max-width: 500px;
     animation: slideInUp 0.8s ease-out 0.4s forwards;
     opacity: 0;
-}
-
-.hero-tagline {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 32px;
-    animation: pulse 2s ease-in-out infinite, slideInUp 0.8s ease-out 0.5s forwards;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.hero-tagline::before,
-.hero-tagline::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    min-width: 50px;
 }
 
 .hero-buttons {
