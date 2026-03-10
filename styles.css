@@ -197,17 +197,17 @@
 
 /* Dark Mode with Gradient */
 [data-theme="dark"] {
-    --primary: #00d4aa;
-    --primary-dark: #00b894;
-    --secondary: #ff6b9d;
-    --accent: #a29bfe;
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary: #f43f5e;
+    --accent: #22d3ee;
     --background: #0f0f23;
     --foreground: #ffffff;
     --card-bg: #1a1a2e;
     --border-color: #2d2d44;
     --text-muted: #b8b8c8;
     --text-light: #8888a0;
-    --gradient-primary: linear-gradient(135deg, #00d4aa 0%, #6c5ce7 50%, #ff6b9d 100%);
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
 }
 
 /* ==================== Reset ==================== */
