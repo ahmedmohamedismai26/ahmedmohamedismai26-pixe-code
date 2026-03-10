@@ -1121,6 +1121,16 @@ body[dir="rtl"] .contact-form {
     text-align: right;
 }
 
+[dir="rtl"] .form-group input,
+[dir="rtl"] .form-group select,
+[dir="rtl"] .form-group textarea,
+body[dir="rtl"] .form-group input,
+body[dir="rtl"] .form-group select,
+body[dir="rtl"] .form-group textarea {
+    text-align: right;
+    direction: rtl;
+}
+
 .contact-form:hover {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
 }
