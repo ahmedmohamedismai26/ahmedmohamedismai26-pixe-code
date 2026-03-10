@@ -182,32 +182,64 @@
 
 /* ==================== Variables ==================== */
 :root {
-    --primary: #0057ff;
-    --primary-dark: #0047cc;
-    --secondary: #ff3366;
-    --accent: #00d4aa;
-    --background: #fafafa;
+    /* Primary Colors - الألوان الأساسية */
+    --primary: #0052cc;
+    --primary-dark: #003d99;
+    --primary-light: #4d7fff;
+
+    /* Secondary Colors - الألوان الثانوية */
+    --secondary: #ff2e5e;
+    --secondary-light: #ff6b8a;
+
+    /* Accent Colors - الألوان المميزة */
+    --accent: #00c9a7;
+    --accent-light: #4de8c5;
+
+    /* Neutral Colors - الألوان المحايدة */
+    --background: #f8f9fa;
     --foreground: #1a1a2e;
     --card-bg: #ffffff;
-    --border-color: #e8e8e8;
-    --text-muted: #4a4a5a;
-    --text-light: #8888a0;
-    --gradient-primary: linear-gradient(135deg, #0057ff 0%, #00d4aa 100%);
+    --border-color: #e1e4e8;
+
+    /* Text Colors - ألوان النصوص */
+    --text-primary: #1a1a2e;
+    --text-muted: #5a5a6e;
+    --text-light: #8a8a9e;
+
+    /* Gradient - التدرجات */
+    --gradient-primary: linear-gradient(135deg, #0052cc 0%, #00c9a7 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff2e5e 0%, #ff6b8a 100%);
 }
 
 /* Dark Mode with Gradient */
 [data-theme="dark"] {
-    --primary: #3b82f6;
-    --primary-dark: #2563eb;
-    --secondary: #f43f5e;
-    --accent: #22d3ee;
-    --background: #0f0f23;
-    --foreground: #e2e8f0;
-    --card-bg: #1a1a2e;
-    --border-color: #2d2d44;
-    --text-muted: #94a3b8;
-    --text-light: #64748b;
-    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
+    /* Primary Colors - الألوان الأساسية */
+    --primary: #4d7fff;
+    --primary-dark: #3d6bff;
+    --primary-light: #7fa3ff;
+
+    /* Secondary Colors - الألوان الثانوية */
+    --secondary: #ff6b8a;
+    --secondary-light: #ff8fa3;
+
+    /* Accent Colors - الألوان المميزة */
+    --accent: #4de8c5;
+    --accent-light: #7ff5d9;
+
+    /* Neutral Colors - الألوان المحايدة */
+    --background: #0f1419;
+    --foreground: #e8edf5;
+    --card-bg: #1a1f2e;
+    --border-color: #2d3544;
+
+    /* Text Colors - ألوان النصوص */
+    --text-primary: #e8edf5;
+    --text-muted: #a8b5c8;
+    --text-light: #7a8599;
+
+    /* Gradient - التدرجات */
+    --gradient-primary: linear-gradient(135deg, #4d7fff 0%, #4de8c5 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff6b8a 0%, #ff8fa3 100%);
 }
 
 /* ==================== Reset ==================== */
@@ -966,7 +998,7 @@ body[dir="rtl"] .lang-toggle .lang-ar {
     font-size: 0.85rem;
     color: var(--text-light);
     padding: 4px 12px;
-    background: white;
+    background: var(--card-bg);
     border-radius: 20px;
     border: 1px solid var(--border-color);
 }
@@ -1055,7 +1087,7 @@ body[dir="rtl"] .lang-toggle .lang-ar {
 }
 
 .contact-card {
-    background: white;
+    background: var(--card-bg);
     padding: 40px;
     border-radius: 16px;
     text-align: center;
@@ -1063,6 +1095,7 @@ body[dir="rtl"] .lang-toggle .lang-ar {
     display: block;
     animation: reveal 0.6s ease-out forwards;
     opacity: 0;
+    border: 1px solid var(--border-color);
 }
 
 .contact-card:nth-child(1) {
@@ -1184,7 +1217,7 @@ body[dir="rtl"] .form-group textarea {
 .form-group select {
     cursor: pointer;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%234a4a5a' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%235a5a6e' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 16px) center;
     padding-right: 40px;
