@@ -182,46 +182,46 @@
 
 /* ==================== Variables - Improved Color Scheme ==================== */
 :root {
-    /* Primary Colors - Modern Blue */
-    --primary: #0052cc;
-    --primary-dark: #003d99;
-    --primary-light: #4d7fff;
-    --primary-lighter: #e8f0ff;
+    /* Primary Colors - Soft Blue */
+    --primary: #4a6fa5;
+    --primary-dark: #3a5a8a;
+    --primary-light: #6b8fc5;
+    --primary-lighter: #e8eef5;
 
-    /* Secondary Colors - Vibrant Coral */
-    --secondary: #ff2e5e;
-    --secondary-light: #ff6b8a;
-    --secondary-lighter: #ffe8f0;
+    /* Secondary Colors - Soft Coral */
+    --secondary: #c9737a;
+    --secondary-light: #d9939a;
+    --secondary-lighter: #f5e8e9;
 
-    /* Accent Colors - Fresh Teal */
-    --accent: #00c9a7;
-    --accent-light: #4de8c5;
-    --accent-lighter: #e8fdf9;
+    /* Accent Colors - Soft Teal */
+    --accent: #5a9a8a;
+    --accent-light: #7abaaa;
+    --accent-lighter: #e8f5f2;
 
     /* Success Colors */
-    --success: #10b981;
-    --success-light: #6ee7b7;
+    --success: #6b9b8a;
+    --success-light: #8bbbaa;
 
     /* Warning Colors */
-    --warning: #f59e0b;
-    --warning-light: #fcd34d;
+    --warning: #c9a55a;
+    --warning-light: #ddc58a;
 
     /* Neutral Colors - Light Mode */
     --background: #f8f9fb;
     --background-secondary: #f0f2f7;
-    --foreground: #1a1a2e;
+    --foreground: #2d3748;
     --card-bg: #ffffff;
-    --border-color: #e1e4e8;
+    --border-color: #e2e6ed;
     --border-light: #f0f2f7;
 
     /* Text Colors */
-    --text-primary: #1a1a2e;
-    --text-muted: #5a5a6e;
-    --text-light: #8a8a9e;
+    --text-primary: #2d3748;
+    --text-muted: #5a6578;
+    --text-light: #8892a2;
 
-    /* Gradient */
-    --gradient-primary: linear-gradient(135deg, #0052cc 0%, #00c9a7 100%);
-    --gradient-secondary: linear-gradient(135deg, #ff2e5e 0%, #ff6b8a 100%);
+    /* Gradient - التدرجات */
+    --gradient-primary: linear-gradient(135deg, #4a6fa5 0%, #5a9a8a 100%);
+    --gradient-secondary: linear-gradient(135deg, #c9737a 0%, #d9939a 100%);
 }
 
 /* Dark Mode - Enhanced with better contrast */
@@ -416,7 +416,7 @@ p {
     right: 0;
     z-index: 1000;
     padding: 16px 0;
-    background: rgba(1, 86, 255, 0.95);
+    background: rgba(248, 249, 251, 0.95);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--border-color);
@@ -775,7 +775,7 @@ body[dir="rtl"] .lang-toggle .lang-ar {
 
 .btn-primary {
     background: var(--primary);
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 .btn-primary:hover {
@@ -786,38 +786,71 @@ body[dir="rtl"] .lang-toggle .lang-ar {
 
 .btn-outline {
     background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
 }
 
 .btn-outline:hover {
-    background: var(--primary-lighter);
-    border-color: var(--primary);
-    color: var(--primary);
+    background: var(--secondary-lighter);
+    border-color: var(--secondary);
+    color: var(--secondary);
 }
 
-/* Work Button - Different color */
-.btn-work {
+/* Hero Buttons - Specific Styling */
+.hero-buttons .btn-primary {
+    background: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    box-shadow: 0 12px 35px rgba(0, 87, 255, 0.35);
+}
+
+.hero-buttons .btn-outline {
+    background: var(--secondary-lighter);
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.hero-buttons .btn-outline:hover {
     background: var(--secondary);
+    border-color: var(--secondary);
+    color: white;
+    box-shadow: 0 12px 35px rgba(255, 46, 94, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Dark Mode - Hero Buttons */
+[data-theme="dark"] .hero-buttons .btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
     color: white;
 }
 
-.btn-work:hover {
-    background: var(--secondary-dark, #e62950);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 46, 94, 0.3);
+[data-theme="dark"] .hero-buttons .btn-primary:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+    box-shadow: 0 12px 35px rgba(91, 158, 255, 0.35);
 }
 
-/* Contact Button - Different color */
-.btn-contact {
-    background: var(--accent);
+[data-theme="dark"] .hero-buttons .btn-outline {
+    background: var(--secondary-lighter);
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+[data-theme="dark"] .hero-buttons .btn-outline:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
     color: white;
-}
-
-.btn-contact:hover {
-    background: var(--accent-dark, #00b396);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 201, 167, 0.3);
+    box-shadow: 0 12px 35px rgba(255, 107, 138, 0.35);
 }
 
 .social-links {
