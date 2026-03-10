@@ -806,6 +806,7 @@ body[dir="rtl"] .lang-toggle .lang-ar {
     margin-bottom: 24px;
     animation: slideInUp 0.8s ease-out 0.2s forwards;
     opacity: 0;
+    font-size: 3rem;
 }
 
 .hero-content h1 span {
