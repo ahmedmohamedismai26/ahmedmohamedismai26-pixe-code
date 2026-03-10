@@ -549,7 +549,7 @@ p {
 
 .nav-btn:hover {
     transform: translateY(-2px);
-    color: var(--primary);
+    color: #ffffff;
 }
 
 .nav-btn::after {
@@ -559,13 +559,13 @@ p {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary);
+    background: #ffffff;
     transition: width 0.3s;
 }
 
 .nav-btn:hover,
 .nav-btn.active {
-    color: var(--primary);
+    color: #ffffff;
 }
 
 .nav-btn:hover::after,
