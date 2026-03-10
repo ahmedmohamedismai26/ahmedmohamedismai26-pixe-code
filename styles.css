@@ -863,6 +863,7 @@ body[dir="rtl"] .lang-toggle .lang-ar {
     margin: 0 auto;
     animation: slideInUp 0.6s ease-out 0.2s forwards;
     opacity: 0;
+    color: var(--text-muted);
 }
 
 .projects-grid {
