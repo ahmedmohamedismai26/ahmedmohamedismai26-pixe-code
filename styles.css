@@ -101,6 +101,21 @@
     --gradient-primary: linear-gradient(135deg, #0057ff 0%, #00d4aa 100%);
 }
 
+/* Dark Mode with Gradient */
+[data-theme="dark"] {
+    --primary: #00d4aa;
+    --primary-dark: #00b894;
+    --secondary: #ff6b9d;
+    --accent: #a29bfe;
+    --background: #0f0f23;
+    --foreground: #ffffff;
+    --card-bg: #1a1a2e;
+    --border-color: #2d2d44;
+    --text-muted: #b8b8c8;
+    --text-light: #8888a0;
+    --gradient-primary: linear-gradient(135deg, #00d4aa 0%, #6c5ce7 50%, #ff6b9d 100%);
+}
+
 /* ==================== Reset ==================== */
 * {
     margin: 0;
@@ -282,6 +297,30 @@ p {
 .nav-btn:hover::after,
 .nav-btn.active::after {
     width: 100%;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--foreground);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-left: 16px;
+}
+
+.theme-toggle:hover {
+    background: var(--primary);
+    color: white;
+    transform: rotate(15deg);
+    border-color: var(--primary);
 }
 
 /* ==================== Sections ==================== */
