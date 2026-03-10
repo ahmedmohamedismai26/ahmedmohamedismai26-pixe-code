@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed | Graphic Designer & Developer</title>
     <meta name="description" content="Professional Portfolio of Ahmed - Graphic Designer and Software Developer">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Aref+Ruqaa:wght@400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <a href="#home" class="logo" onclick="showSection('home')">Ahmed<span>.</span></a>
+                <a href="#home" class="logo" onclick="showSection('home')"><span class="logo-text"
+                        data-i18n="logoName">Ahmed</span><span class="logo-dot">.</span></a>
                 <div class="nav-links">
-                    <button class="nav-btn active" data-section="home">Home</button>
-                    <button class="nav-btn" data-section="projects">Work</button>
-                    <button class="nav-btn" data-section="about">About</button>
-                    <button class="nav-btn" data-section="contact">Contact</button>
+                    <button class="nav-btn active" data-section="home" data-i18n="navHome">Home</button>
+                    <button class="nav-btn" data-section="projects" data-i18n="navWork">Work</button>
+                    <button class="nav-btn" data-section="about" data-i18n="navAbout">About</button>
+                    <button class="nav-btn" data-section="contact" data-i18n="navContact">Contact</button>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
                     </button>
+                    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                        <span class="lang-en">EN</span>
+                        <span class="lang-ar">ع</span>
+                    </button>
                 </div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -33,15 +49,16 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>Graphic Designer <span>&</span> Developer</h1>
-                    <p class="hero-subtitle">
-                        Creating stunning digital experiences that combine creative design and professional development. Based in Egypt, working with clients worldwide.
+                    <h1 data-i18n="heroTitle">Graphic Designer <span>&</span> Developer</h1>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">
+                        Creating stunning digital experiences that combine creative design and professional development.
+                        Based in Egypt, working with clients worldwide.
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="showSection('projects')">
+                        <button class="btn btn-primary" onclick="showSection('projects')" data-i18n="viewWorkBtn">
                             View My Work <i class="fas fa-arrow-right"></i>
                         </button>
-                        <button class="btn btn-outline" onclick="showSection('contact')">
+                        <button class="btn btn-outline" onclick="showSection('contact')" data-i18n="contactBtn">
                             Get In Touch
                         </button>
                     </div>
@@ -49,7 +66,8 @@
                         <a href="https://github.com/ahmedmohamedismai26" class="social-icon" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon" target="_blank">
+                        <a href="https://www.linkedin.com/in/ahmed-ismail-976275381/" class="social-icon"
+                            target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="https://twitter.com" class="social-icon" target="_blank">
@@ -71,8 +89,8 @@
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
-                <h2>Selected Work</h2>
-                <p>A collection of projects showcasing design and development skills</p>
+                <h2 data-i18n="projectsTitle">Selected Work</h2>
+                <p data-i18n="projectsSubtitle">A collection of projects showcasing design and development skills</p>
             </div>
 
             <div class="projects-grid">
@@ -84,7 +102,8 @@
                         </div>
                         <div class="project-content">
                             <h3>Personal Portfolio Website</h3>
-                            <p>A modern, responsive portfolio website featuring dark/light theme toggle, smooth animations, and professional project showcase.</p>
+                            <p>A modern, responsive portfolio website featuring dark/light theme toggle, smooth
+                                animations, and professional project showcase.</p>
                             <div class="project-tags">
                                 <span class="tag">Web Design</span>
                                 <span class="tag">Development</span>
@@ -102,7 +121,8 @@
                         </div>
                         <div class="project-content">
                             <h3>E-Commerce Mobile Application</h3>
-                            <p>A full-featured shopping app with product catalog, shopping cart, user authentication, and secure payment integration.</p>
+                            <p>A full-featured shopping app with product catalog, shopping cart, user authentication,
+                                and secure payment integration.</p>
                             <div class="project-tags">
                                 <span class="tag">Mobile App</span>
                                 <span class="tag">React Native</span>
@@ -120,7 +140,8 @@
                         </div>
                         <div class="project-content">
                             <h3>Task Manager Web Application</h3>
-                            <p>A productivity application for task management with drag-and-drop kanban boards, due dates, and team collaboration features.</p>
+                            <p>A productivity application for task management with drag-and-drop kanban boards, due
+                                dates, and team collaboration features.</p>
                             <div class="project-tags">
                                 <span class="tag">Web App</span>
                                 <span class="tag">React</span>
@@ -138,7 +159,8 @@
                         </div>
                         <div class="project-content">
                             <h3>Brand Identity Design</h3>
-                            <p>Complete brand identity design including logo design, color palette, typography, and comprehensive brand guidelines.</p>
+                            <p>Complete brand identity design including logo design, color palette, typography, and
+                                comprehensive brand guidelines.</p>
                             <div class="project-tags">
                                 <span class="tag">Branding</span>
                                 <span class="tag">Logo Design</span>
@@ -156,7 +178,8 @@
                         </div>
                         <div class="project-content">
                             <h3>Weather Dashboard</h3>
-                            <p>Real-time weather application with 7-day forecast, location-based weather data, and beautiful visual representations.</p>
+                            <p>Real-time weather application with 7-day forecast, location-based weather data, and
+                                beautiful visual representations.</p>
                             <div class="project-tags">
                                 <span class="tag">Vue.js</span>
                                 <span class="tag">OpenWeather API</span>
@@ -174,7 +197,8 @@
                         </div>
                         <div class="project-content">
                             <h3>2D Platformer Game</h3>
-                            <p>An engaging 2D platformer game with custom graphics, multiple levels, collectibles, and smooth gameplay controls.</p>
+                            <p>An engaging 2D platformer game with custom graphics, multiple levels, collectibles, and
+                                smooth gameplay controls.</p>
                             <div class="project-tags">
                                 <span class="tag">Game Development</span>
                                 <span class="tag">Unity</span>
@@ -191,41 +215,46 @@
     <section id="about" class="section about-section">
         <div class="container">
             <div class="section-header">
-                <h2>About Me</h2>
-                <p>Get to know more about my background and skills</p>
+                <h2 data-i18n="aboutTitle">About Me</h2>
+                <p data-i18n="aboutSubtitle">Get to know more about my background and skills</p>
             </div>
 
             <div class="about-grid">
                 <div class="about-content">
-                    <p>
-                        I'm a passionate graphic designer and software developer with over 3 years of experience creating digital experiences that make a difference. I specialize in UI/UX design, web development, mobile applications, and game development.
+                    <p data-i18n="aboutP1">
+                        I'm a passionate graphic designer and software developer with over 3 years of experience
+                        creating digital experiences that make a difference. I specialize in UI/UX design, web
+                        development, mobile applications, and game development.
                     </p>
-                    <p>
-                        My approach combines creative design thinking with robust technical implementation to deliver solutions that not only look great but also perform exceptionally. I believe in continuous learning and staying updated with the latest technologies and design trends.
+                    <p data-i18n="aboutP2">
+                        My approach combines creative design thinking with robust technical implementation to deliver
+                        solutions that not only look great but also perform exceptionally. I believe in continuous
+                        learning and staying updated with the latest technologies and design trends.
                     </p>
-                    <p>
-                        Every project is an opportunity to create something meaningful and impactful. Let's work together to bring your ideas to life!
+                    <p data-i18n="aboutP3">
+                        Every project is an opportunity to create something meaningful and impactful. Let's work
+                        together to bring your ideas to life!
                     </p>
 
                     <div class="stats-grid">
                         <div class="stat-item">
                             <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-label" data-i18n="yearsExp">Years Experience</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">50+</span>
-                            <span class="stat-label">Projects Completed</span>
+                            <span class="stat-label" data-i18n="projectsCompleted">Projects Completed</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">30+</span>
-                            <span class="stat-label">Happy Clients</span>
+                            <span class="stat-label" data-i18n="happyClients">Happy Clients</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="skills-section">
-                <h3>Skills & Tools</h3>
+                <h3 data-i18n="skillsTitle">Skills & Tools</h3>
                 <div class="skills-grid">
                     <span class="skill-tag">UI/UX Design</span>
                     <span class="skill-tag">Graphic Design</span>
@@ -251,14 +280,15 @@
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
-                <h2>Let's Work Together</h2>
-                <p>Have a project in mind? Get in touch and let's create something amazing.</p>
+                <h2 data-i18n="contactTitle">Let's Work Together</h2>
+                <p data-i18n="contactSubtitle">Have a project in mind? Get in touch and let's create something amazing.
+                </p>
             </div>
 
             <div class="contact-grid">
                 <a href="mailto:ahg30405060@gmail.com?subject=Hello from Portfolio" class="contact-card">
                     <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
+                    <h3 data-i18n="emailLabel">Email</h3>
                     <p>ahg30405060@gmail.com</p>
                 </a>
 
@@ -274,16 +304,79 @@
                     <p>github.com/ahmedmohamedismai26</p>
                 </a>
             </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="nameLabel">Name</label>
+                            <input type="text" id="name" name="name" required data-i18n-placeholder="namePlaceholder">
+                            <span class="form-error" data-i18n="nameError">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="emailLabel">Email</label>
+                            <input type="email" id="email" name="email" required
+                                data-i18n-placeholder="emailPlaceholder">
+                            <span class="form-error" data-i18n="emailError">Please enter a valid email</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" data-i18n="phoneLabel">Phone</label>
+                            <input type="tel" id="phone" name="phone" data-i18n-placeholder="phonePlaceholder">
+                            <span class="form-error" data-i18n="phoneError">Please enter a valid phone number</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="subjectLabel">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                data-i18n-placeholder="subjectPlaceholder">
+                            <span class="form-error" data-i18n="subjectError">Please enter a subject</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service" data-i18n="serviceLabel">Service Type</label>
+                        <select id="service" name="service" required>
+                            <option value="" data-i18n="serviceSelect">Select a service</option>
+                            <option value="web-design" data-i18n="serviceWebDesign">Web Design</option>
+                            <option value="web-development" data-i18n="serviceWebDev">Web Development</option>
+                            <option value="mobile-app" data-i18n="serviceMobileApp">Mobile Application</option>
+                            <option value="branding" data-i18n="serviceBranding">Branding & Identity</option>
+                            <option value="ui-ux" data-i18n="serviceUIUX">UI/UX Design</option>
+                            <option value="game-dev" data-i18n="serviceGameDev">Game Development</option>
+                            <option value="other" data-i18n="serviceOther">Other</option>
+                        </select>
+                        <span class="form-error" data-i18n="serviceError">Please select a service</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="messageLabel">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            data-i18n-placeholder="messagePlaceholder"></textarea>
+                        <span class="form-error" data-i18n="messageError">Please enter your message</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span data-i18n="sendBtn">Send Message</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div id="formSuccess" class="form-success hidden">
+                    <i class="fas fa-check-circle"></i>
+                    <h3 data-i18n="successTitle">Message Sent!</h3>
+                    <p data-i18n="successMessage">Thank you for reaching out. I'll get back to you soon.</p>
+                    <button type="button" class="btn btn-outline" onclick="resetContactForm()"
+                        data-i18n="newMessageBtn">Send Another Message</button>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; Pixel.Code_26</p>
+            <p>&copy; <span class="year">2026</span> <span data-i18n="footerText">Pixel.Code_26</span></p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
