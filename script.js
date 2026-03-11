@@ -343,4 +343,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // WhatsApp Integration
+  document.getElementById('sendWhatsApp').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const subject = document.getElementById('subject').value;
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value;
+
+    // Validate required fields
+    if (!name || !email || !subject || !message) {
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    // Create WhatsApp message
+    const whatsappMessage = `Hello, I'm ${name}%0A%0AEmail: ${email}%0APhone: ${phone || 'Not provided'}%0A%0ASubject: ${subject}%0AService: ${service || 'Not specified'}%0A%0AMessage:%0A${message}`;
+
+    // WhatsApp API URL
+    const whatsappURL = `https://wa.me/201026874332?text=${whatsappMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+  });
 });

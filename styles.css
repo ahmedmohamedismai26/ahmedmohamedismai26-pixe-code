@@ -1417,6 +1417,21 @@ body[dir="rtl"] .form-group select {
     cursor: not-allowed;
 }
 
+.btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+    padding: 18px 32px;
+    font-size: 1.1rem;
+    margin-top: 12px;
+    background: #25D366;
+    color: white;
+    border: none;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+}
+
 /* Form Success Message */
 .form-success {
     background: var(--card-bg);
