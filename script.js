@@ -211,7 +211,7 @@ window.showSection = function (sectionId) {
   history.pushState(null, null, `#${sectionId}`);
 
   // Close mobile menu when a link is clicked
-  closeMobileMenu();
+  window.closeMobileMenu();
 };
 
 // Navbar scroll effect
@@ -279,21 +279,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close menu when clicking on overlay
-    overlay.addEventListener('click', closeMobileMenu);
+    overlay.addEventListener('click', window.closeMobileMenu);
 
     // Close menu when clicking on a nav link
     const mobileNavBtns = mobileNav.querySelectorAll('.nav-btn');
     mobileNavBtns.forEach(btn => {
-      btn.addEventListener('click', closeMobileMenu);
+      btn.addEventListener('click', window.closeMobileMenu);
     });
   }
 
-  function closeMobileMenu() {
-    hamburger.classList.remove('active');
-    mobileNav.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-  }
+  // closeMobileMenu function is now global (defined at the end of the file)
 
   // Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
@@ -372,3 +367,30 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(whatsappURL, '_blank');
   });
 });
+
+// Reset Contact Form Function
+window.resetContactForm = function() {
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  
+  if (contactForm) {
+    contactForm.reset();
+    contactForm.style.display = 'block';
+  }
+  
+  if (formSuccess) {
+    formSuccess.classList.add('hidden');
+  }
+};
+
+// Close Mobile Menu Function (make it global)
+window.closeMobileMenu = function() {
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.querySelector('.nav-links');
+  const overlay = document.querySelector('.nav-overlay');
+  
+  if (hamburger) hamburger.classList.remove('active');
+  if (mobileNav) mobileNav.classList.remove('active');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+};
